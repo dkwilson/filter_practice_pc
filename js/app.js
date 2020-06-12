@@ -31,5 +31,34 @@
 
 //search input
 (function(){
+    //target search box
+    const search = document.getElementById('search-item');
 
+    search.addEventListener('keyup', () =>{
+        let value = search.value.toLowerCase().trim();
+
+        const items = document.querySelectorAll('.store-item');
+        
+        items.forEach(item => {
+            let type = item.dataset.item;
+
+            // //will include more results than intended 
+            // if(type.includes(value)){
+            //     item.style.display = 'block';
+            // } else {
+            //     item.style.display = 'none';
+            // }
+
+            let length = value.length; 
+            
+            let match = type.slice(0,length);
+
+            if(value === match) {
+                item.style.display = "block"
+            } else {
+                item.style.display = "none"
+            }
+        })
+
+    })
 })();
