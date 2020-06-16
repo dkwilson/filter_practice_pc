@@ -12,7 +12,7 @@
 
   <!-- font awesome -->
   <link rel="stylesheet" href="css/all.css">
-  <title>Starter Template</title>
+  <title>Cart Project</title>
   <style>
   </style>
 </head>
@@ -43,7 +43,7 @@ https://www.iconfinder.com/korawan_m
             <a class="nav-link" href="#">store</a>
           </li>
         </ul>
-        <div class="nav-info-items d-none d-lg-flex ">
+        <div class="nav-info-items d-flex justify-content-between ">
           <!-- single info -->
           <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
             <span class="info-icon mx-lg-3"><i class="fas fa-phone"></i></span>
@@ -68,14 +68,15 @@ https://www.iconfinder.com/korawan_m
           <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
 
         </div>
-        <div id="cart" class="cart">
+        <div id="cart" class="cart ">
           <!-- cart item -->
           <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-            <img src="img/z-cake-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+            <img src="img-cart/cake-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
             <div class="item-text">
 
               <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-              <p id="cart-item-price" class="mb-0">10.99</p>
+              <span>$</span>
+              <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
             </div>
             <a href="#" id='cart-item-remove' class="cart-item-remove">
               <i class="fas fa-trash"></i>
@@ -84,11 +85,12 @@ https://www.iconfinder.com/korawan_m
           <!--end of  cart item -->
           <!-- cart item -->
           <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-            <img src="img/z-sweets-3.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+            <img src="img-cart/doughnut-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
             <div class="cart-item-text">
 
               <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-              <p id="cart-item-price" class="mb-0">10.99</p>
+              <span>$</span>
+              <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
             </div>
             <a href="#" id='cart-item-remove' class="cart-item-remove">
               <i class="fas fa-trash"></i>
@@ -180,7 +182,7 @@ https://www.iconfinder.com/korawan_m
       </div>
       <!--end of filter buttons -->
       <!-- store  items-->
-      <div class="row" id="store-items">
+      <div class="row" class="store-items" id="store-items">
         <!-- single item -->
         <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
           <div class="card ">
@@ -450,24 +452,19 @@ https://www.iconfinder.com/korawan_m
   </section>
   <!--end of store items -->
 
-  <!-- Modal-Container -->
-  <div class="container-fluid">
+
+  <!-- modal-container -->
+  <div class="container-fluid ">
     <div class="row lightbox-container align-items-center">
       <div class="col-10 col-md-10 mx-auto text-right lightbox-holder">
-        <span class="lightbox-close">
-          <i class="fas fa-window-close"></i>
-        </span>
+        <span class="lightbox-close"><i class="fas fa-window-close"></i></span>
         <div class="lightbox-item"></div>
-        <span class="lightbox-control btnLeft">
-          <i class="fas fa-caret-left"></i>
-        </span>
-        <span class="lightbox-control btnRight">
-          <i class="fas fa-caret-right"></i>
-        </span>
+        <span class="lightbox-control btnLeft"><i class="fas fa-caret-left"></i></span>
+        <span class="lightbox-control btnRight"><i class="fas fa-caret-right"></i></span>
       </div>
+
     </div>
   </div>
-
 
 
   <!-- jquery -->
