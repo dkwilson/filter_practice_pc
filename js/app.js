@@ -62,3 +62,64 @@
 
     })
 })();
+
+//lightbox
+
+(function(){ 
+    // all imgaes
+    let imageList = [];
+    let counter = 0;
+
+    const images = document.querySelectorAll('.store-img');
+    const container = document.querySelector('.lightbox-container');
+    const item = document.querySelector('.lightbox-item');
+    const closeIcon = document.querySelector('.lightbox-close');
+    const btnLeft = document.querySelector('.btnLeft');
+    const btnRight = document.querySelector('.btnRight');
+
+    //add all images to the array
+    images.forEach(img => {
+        imageList.push(img.src)
+    })
+
+    //open modal
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            //show modal
+            container.classList.add('show');
+            //get source
+            let src = event.target.src;
+
+            counter = imageList.indexOf(src);
+            
+            //show modal within image
+            item.style.backgroundImage = `url(${src})`;
+        });
+    });
+
+    //close modal
+    closeIcon.addEventListener('click', () => {
+        //remove modal
+        container.classList.remove('show');
+    });
+
+    //pan left
+    btnLeft.addEventListener('click', () => {
+        counter--;
+        if (counter < 0) {
+            counter = imageList.length - 1;
+            
+        }
+        item.style.backgroundImage = `url(${imageList[counter]})`;
+    })
+
+    //pan right
+    btnRight.addEventListener('click', () => {
+        counter++
+        if (counter > imageList.length -1) {
+            counter = 0;
+            
+        }
+        item.style.backgroundImage = `url(${imageList[counter]})`;
+    })
+})();
