@@ -87,14 +87,20 @@ body {
   top: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--mainYellow);
   width: 0;
   overflow: hidden;
+  z-index: 1;
 }
 .show-cart {
   width: 18rem;
   padding: 2rem 1.5rem;
   transform: rotateY(-360deg);
+}
+@media screen and (max-width: 768px) {
+  .show-cart {
+    width: 100%;
+  }
 }
 .cart-item {
   transition: all 2s ease-in-out;
@@ -250,4 +256,3 @@ body {
   right: 0;
   transform: translateX(60%);
 }
-
